@@ -1,4 +1,4 @@
-import { generateGitHubProfile } from "@/defer/generateGitHubProfile";
+import generateGitHubProfile from "@/defer/generateGitHubProfile";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(

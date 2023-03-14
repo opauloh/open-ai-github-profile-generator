@@ -144,7 +144,7 @@ export async function generateGitHubProfile(githubUsername: string) {
   const mood = "professional";
   const prompt = `Based on my Github profile: 
   ${readme}
-- Write a more ${mood} version of my GitHub Profile, I want also to use words from Never gonna give you up songs to show how good I am. Additional info:
+- Write a more ${mood} version of my GitHub Profile, I want also to use words from Never gonna give you up song to show how reliable I can be. Additional info:
 - I Live in ${location}
 - I Have ${stars} Github stars
 - My bio: ${bio}
