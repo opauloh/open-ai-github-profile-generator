@@ -11,13 +11,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
-  font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1,"ss06" 1;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1;
   color-scheme: dark;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-          sans-serif;
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
-  
+
   line-height: 1.75rem;
 }
 
@@ -103,14 +103,14 @@ body {
   background: transparent;
 }
 
-.header-button > div:hover, .header-button.active > div {
+.header-button > div:hover,
+.header-button.active > div {
   background: rgb(40, 40, 40) !important;
 }
 
 .header-button + .header-button {
   margin-left: 8px;
 }
-
 
 h1,
 h2,
@@ -121,19 +121,16 @@ h6 {
   margin: 0;
 }
 
-
 h2,
 h3,
-h4{
+h4 {
   margin: 40px 0;
 }
 
 h5,
-h6 { 
+h6 {
   margin: 40px 0 20px 0;
 }
-
-
 
 h1 {
   -webkit-text-size-adjust: 100%;
@@ -172,24 +169,24 @@ h1 + p {
   margin: 0;
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
-  font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1,"ss06" 1;
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1;
   color-scheme: dark;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-          sans-serif;
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
   line-height: inherit;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   /* padding-bottom: 5rem; */
   font-weight: 500;
-  transition-property: color,background-color,border-color,-webkit-text-decoration-color,text-decoration-color,fill,stroke;
-  transition-duration: .15s;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: color, background-color, border-color,
+    -webkit-text-decoration-color, text-decoration-color, fill, stroke;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   word-break: break-word;
   color: #d1d5db;
 }
-
 
 .buttonPrimary {
   outline: none;
@@ -265,8 +262,9 @@ form {
   position: relative;
   padding: 22px 16px;
   background: rgb(40, 40, 40) !important;
-  color: hsl(0,0%,93.0%);
-  font-family: "IBM Plex Mono",Courier,Roboto Mono,Inconsolata, Source Code Pro;
+  color: hsl(0, 0%, 93%);
+  font-family: "IBM Plex Mono", Courier, Roboto Mono, Inconsolata,
+    Source Code Pro;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -310,16 +308,19 @@ form {
   line-height: 20px;
 }
 
-
 .container {
   position: relative;
-  background: radial-gradient(114.74% 81.67% at 49.44% 59.64%, rgb(28, 28, 28) 47.4%, rgba(28, 28, 28, 0.4) 100%);
+  background: radial-gradient(
+    114.74% 81.67% at 49.44% 59.64%,
+    rgb(28, 28, 28) 47.4%,
+    rgba(28, 28, 28, 0.4) 100%
+  );
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1432px;
   padding-top: 50px;
-  margin-top: 112px;;
+  margin-top: 112px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,4 +357,33 @@ form {
   margin-right: 8px;
 
   color: #ffffff;
+}
+
+.button {
+  outline: none;
+  border: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  transition: background 0.5s ease-out 0s;
+  color: #fff;
+  background: #777;
+}
+.button.active {
+  background: #005aff;
+}
+.mods {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
 }

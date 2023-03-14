@@ -61,9 +61,7 @@ const openAi = new OpenAIApi(
   })
 );
 
-export async function getGithubInfo(
-  githubUsername: string
-): Promise<GithubInfo> {
+async function getGithubInfo(githubUsername: string): Promise<GithubInfo> {
   const result = await graphqlWithAuth<GitHubUserInfo>(
     `
       query userInfo($githubUsername: String!) {
@@ -137,17 +135,29 @@ export async function getGithubInfo(
   };
 }
 
-export async function generateGitHubProfile(githubUsername: string) {
+const modsList: Record<string, string> = {
+  rick_astley: "- use words from never gonna give you up song",
+  yoda: "- talk like master yoda",
+};
+
+export async function generateGitHubProfile(
+  githubUsername: string,
+  mods: string
+) {
+  console.log(mods);
   const { location, stars, bio, readme } = await getGithubInfo(githubUsername);
 
   // with gh data, format a prompt for openai
   const mood = "professional";
   const prompt = `Based on my Github profile: 
   ${readme}
-- Write a more ${mood} version of my GitHub Profile, I want also to use words from Never gonna give you up song to show how reliable I can be. Additional info:
+- Write a more ${mood} version of my GitHub Profile. Additional info:
 - I Live in ${location}
-- I Have ${stars} Github stars
 - My bio: ${bio}
+${mods
+  .split(",")
+  .map((mod) => (modsList.hasOwnProperty(mod) ? modsList[mod] : ""))
+  .join("\n")}
 `;
 
   const completion = await openAi.createCompletion({
