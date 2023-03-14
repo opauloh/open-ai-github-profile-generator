@@ -7,6 +7,7 @@ This is my first project using OpenAI. I was inspired by [Jack Herrington](https
 - [Next.js](https://nextjs.org/)
 - [OpenAI](https://openai.com/)
 - [GitHub GraphQL API](https://docs.github.com/en/graphql)
+- [React-Query](https://react-query.tanstack.com/)
 
 ## Challenges
 

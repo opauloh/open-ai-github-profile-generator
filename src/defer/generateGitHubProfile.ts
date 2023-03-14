@@ -144,7 +144,7 @@ export async function generateGitHubProfile(githubUsername: string) {
   const mood = "professional";
   const prompt = `Based on my Github profile: 
   ${readme}
-- Write a more ${mood} version of my GitHub Profile. Additional info:
+- Write a more ${mood} version of my GitHub Profile, I want also to use words from Never gonna give you up songs to show how good I am. Additional info:
 - I Live in ${location}
 - I Have ${stars} Github stars
 - My bio: ${bio}
@@ -163,3 +163,5 @@ export async function generateGitHubProfile(githubUsername: string) {
 
   return completion.data.choices[0].text;
 }
+
+export default defer(generateGitHubProfile, { concurrency: 10 });
